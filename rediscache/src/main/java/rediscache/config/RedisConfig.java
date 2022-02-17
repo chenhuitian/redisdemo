@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class RedisConfig extends CachingConfigurerSupport {
 	Logger logger = LoggerFactory.getLogger(RedisConfig.class);
 	
-	//even redis can not access, could return data from database
+	//even redis can not access, could return data from database ignore exception
 	@Bean
 	@Override
 	public CacheErrorHandler errorHandler() {
