@@ -1,6 +1,5 @@
 server:
   port: 8080
-  
 
 #redis:
 #  host: 127.0.0.1
@@ -16,7 +15,7 @@ server:
 spring:
   cache:    type: redis
     redis:      cache-null-values: true
-      time-to-live: 10000
+      time-to-live: 80000
   redis:    host: 127.0.0.1
     password: 
     port: 6379

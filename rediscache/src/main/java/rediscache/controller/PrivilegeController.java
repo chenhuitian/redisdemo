@@ -28,7 +28,7 @@ public class PrivilegeController {
 	
 	@GetMapping("/{id}")	
 	public ResponseEntity<Optional<Privilege> > findById(@PathVariable Long id){
-		return new ResponseEntity<Optional<Privilege>>(privilegeService.findfindById(id),HttpStatus.OK);
+		return new ResponseEntity<Optional<Privilege>>(privilegeService.findById(id),HttpStatus.OK);
 	}
 
 	@GetMapping	
@@ -42,7 +42,7 @@ public class PrivilegeController {
 	}
 	@PutMapping("/{id}")
 	public ResponseEntity<Privilege> updateById(@PathVariable Long id ,@RequestBody Privilege privilege) throws Exception{
-		Optional<Privilege> privilegeOptional = privilegeService.findfindById(id);
+		Optional<Privilege> privilegeOptional = privilegeService.findById(id);
 		if(!privilegeOptional.isPresent()) {
 			throw new Exception("no privilege");
 		}

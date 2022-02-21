@@ -1,6 +1,5 @@
 package rediscache.server;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +20,7 @@ public class PrivilegeServiceImp implements PrivilegeService {
 	
 	@Override
 	@Cacheable(value = "privilege",key = "#id")
-	public Optional<Privilege> findfindById(Long id) {
+	public Optional<Privilege> findById(Long id) {
 		// TODO Auto-generated method stub
 		return PrivilegeRepository.findById(id);
 	}
